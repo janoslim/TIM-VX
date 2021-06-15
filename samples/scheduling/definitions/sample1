@@ -1,0 +1,30 @@
+# Example definition file
+# startmodel:(modelname)
+# startchunk:(number)
+# dependency:(numberofchunk)
+# iact:batch,h,w,c
+# oact:batch,h,w,c
+# operation:Conv2d
+# endchunk
+# dependency:(numberofchunk)
+# startchunk:(number)
+# iact:batch,h,w,c
+# oact:batch,h,w,c
+# operation:
+# endchunk
+# endmodel
+
+startmodel:sample
+startchunk:1
+iact:1,224,224,3
+oact:1,112,112,32
+operation:Conv2d
+endchunk
+startchunk:2
+dependency:1
+iact:1,112,112,32
+oact:1,112,112,64
+operation:Conv2d
+endchunk
+endmodel
+

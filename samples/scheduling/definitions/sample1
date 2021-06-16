@@ -15,16 +15,21 @@
 # endmodel
 
 startmodel:sample
-startchunk:1
+startchunk:0
+startlayer:0
+ilayer:0
 iact:1,224,224,3
 oact:1,112,112,32
 operation:Conv2d
+endlayer
 endchunk
-startchunk:2
-dependency:1
+startchunk:1
+dependency:0
+startlayer:1
 iact:1,112,112,32
 oact:1,112,112,64
 operation:Conv2d
+endlayer
 endchunk
 endmodel
 
